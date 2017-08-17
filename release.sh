@@ -29,15 +29,15 @@ echo "{\"version\": \"$version\"}" > version.json
 ## get the changelog header
 changelog=$(git --no-pager log --pretty="format:- %w(76,0,2)%s%w(76,2,2)%b" $previous_version..)
 
-echo -n "*** Press ENTER to edit the Changelog.md file:"  && read x
-touch Changelog.md
-tail -n +2 Changelog.md > temp && mv temp Changelog.md 
-echo "$(make_changelog)" | cat - Changelog.md > temp && mv temp Changelog.md
-$EDITOR Changelog.md
+echo -n "*** Press ENTER to edit the CHANGELOG.md file:"  && read x
+touch CHANGELOG.md
+tail -n +2 CHANGELOG.md > temp && mv temp CHANGELOG.md
+echo "$(make_changelog)" | cat - CHANGELOG.md > temp && mv temp CHANGELOG.md
+$EDITOR CHANGELOG.md
 
 GIT_MERGE_AUTOEDIT=no
 echo -n "Commiting Changelog and version.json ..." \
-    && git add Changelog.md version.json \
+    && git add CHANGELOG.md version.json \
     && git commit -m "Updated Changelog and version.json for $version" \
     && echo -n "Releasing..." \
     && (export GIT_MERGE_AUTOEDIT=no; git flow release finish -m "release-$versino" $version) \
