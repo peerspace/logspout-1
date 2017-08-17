@@ -1,4 +1,6 @@
-# Change Log
+# Changelog
+
+## 2017-08-17 - Thu Aug 17 14:48:30 PDT 2017
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
