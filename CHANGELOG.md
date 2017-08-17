@@ -1,4 +1,13 @@
-# Change Log
+# Changelog
+
+## 2017-08-17 - Thu Aug 17 15:09:39 PDT 2017
+
+- change changelog case
+- changelog tweaks
+- PS updates and certs add
+- set version to dev
+
+## 2017-08-17 - Thu Aug 17 14:48:30 PDT 2017
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
